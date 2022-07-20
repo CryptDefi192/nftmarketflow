@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const client = new MongoClient(process.env.DB_URI, {
+const client = new MongoClient('mongodb://localhost:27017/flowchain?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
